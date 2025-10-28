@@ -1,0 +1,61 @@
+<html lang="it">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./img/favicon.jpg">
+
+    <script>
+        const p = document.createElement('p')
+        const h1 = document.createElement('h1')
+        const a = document.createElement('a')
+        const cat_list = ["pallas", "calico"];
+        var cat = new URLSearchParams(window.location.search).get("cat")
+        window.document.title = "Gatto " + cat;
+    </script>
+</head>
+
+<body>
+    <header>
+        <p style="text-align: left;">Iervolino Domenico</p>
+        <p style="text-align: center;">Reti di Calcolatori ed Introduzione alla Cybersecurity</p>
+        <p style="text-align: right;">A.A. 2025/2026</p>
+    </header>
+
+    <div class="sidebar">
+        <a href="./index.html">Home</a>
+        <a href="./lista.html">Lista</a>
+        <a href="./rating.html">Cat Rating</a>
+    </div>
+
+
+    <div class="main" id="main-div"></div>
+
+
+    <script>
+        const main = document.getElementById('main-div');
+
+        main.append(h1);
+        main.append(p);
+        switch (cat) {
+            case "pallas":
+                h1.innerHTML = "Gatto " + cat;
+                p.innerHTML = "Il gatto pallas..."
+                break;
+            case "calico":
+                h1.innerHTML = "Gatto " + cat;
+                p.innerHTML = "Il gatto calico..."
+                break;
+            default:
+                alert("Non conosco questo gatto... Verrai reindirizzato alla scheda di un gatto casuale");
+                cat = cat_list[Math.floor(Math.random() * cat_list.length)];
+                window.location.search = "cat=" + cat;
+                break;
+        }
+    </script>
+</body>
+
+</html>

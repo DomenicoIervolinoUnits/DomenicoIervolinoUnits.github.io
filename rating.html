@@ -1,0 +1,54 @@
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Rating</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./img/favicon.jpg">
+
+
+</head>
+
+<body>
+    <header>
+        <p style="text-align: left;">Iervolino Domenico</p>
+        <p style="text-align: center;">Reti di Calcolatori ed Introduzione alla Cybersecurity</p>
+        <p style="text-align: right;">A.A. 2025/2026</p>
+    </header>
+
+    <div class="sidebar">
+        <a href="./index.html">Home</a>
+        <a href="./lista.html">Lista</a>
+        <a href="./rating.html" id="active">Cat Rating</a>
+    </div>
+
+    <div class="main">
+
+        <form>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 50px;">
+                <img src="./img/La_intelligenza_Artificiale_1.jpg" alt="L'Intelligenza Artificiale" height="100px" style="vertical-align: middle;">
+                <h1 style="width: 600px;">Inserisci la foto del tuo gatto e la nostra intelligenza artificiale gli darà un voto!</h1>
+                <img src="https://i.pinimg.com/736x/b5/21/8f/b5218f83195b16d572c08622a3e784bc.jpg" alt="L'aiutante dell'Intelligenza Artificiale" height="100px">
+            </div>
+
+            <input type="file" id="imgfile" name="imgfile" required accept="image/*">
+            <br><br>
+            <input type="submit" id="submit">
+            <label for="submit">Invia</label>
+            <h1 id="result"></h1>
+            <p style="float: right; padding-right: 15px; font-size: 10px; margin: 0;">*Questo form in realtà non fa niente</p>
+        </form>
+    </div>
+
+    <script>
+        var file = new URLSearchParams(window.location.search).get("imgfile");
+        if (file) {
+
+            const result = document.getElementById('result');
+            result.innerHTML = "10/10 <br> Bellissimo Gatto!"; //Tutti i gatti sono belli!!!
+        }
+    </script>
+</body>
+
+</html>
