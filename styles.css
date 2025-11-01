@@ -72,6 +72,7 @@ a:not(.index) {
     white-space: nowrap;
     border-left: black solid 1px;
     border-right: black solid 1px;
+    border-radius: 15px;
     display: flex;
 }
 
@@ -112,4 +113,16 @@ label:active {
 
 input[type="submit"] {
     display: none;
+}
+
+
+.rightimg {
+    height: 300px;
+    float: right;
+}
+
+.leftimg {
+    height: 300px;
+    float: left;
+    padding-right: 10px;
 }
