@@ -127,10 +127,22 @@ input[type="submit"] {
     padding-right: 10px;
 }
 
-ul {
-    list-style-type: none;
+table {
     display: inline-block;
     width: 50%;
+    padding-left: 25px;
+    border-spacing: 0 10px;
+}
+
+th {
+    vertical-align: top;
+    text-align: right;
+}
+
+td {
+    vertical-align: top;
+    text-align: left;
+    border-bottom: black solid 1px;
 }
 
 .title {
@@ -142,6 +154,6 @@ ul {
 .subtitle {
     display: inline-block;
     width: 50%;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     padding-left: 10px;
 }

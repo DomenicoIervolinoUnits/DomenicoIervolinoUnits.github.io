@@ -16,14 +16,19 @@
         h2.className = "subtitle";
         const a = document.createElement("a");
 
+        const table = document.createElement("table");
+        for (var i = 0; i < 5; i++) {
+            const row = document.createElement("tr");
+            const theader = document.createElement("th");
+            theader.id = "th" + i;
+            const tdata = document.createElement("td");
+            tdata.id = "td" + i;
 
+            row.appendChild(theader);
+            row.appendChild(tdata);
 
-        const list = document.createElement("ul");
-        const origini = document.createElement("li");
-        const taglia = document.createElement("li");
-        const aspetto = document.createElement("li");
-        const indole = document.createElement("li");
-        const altro = document.createElement("li");
+            table.appendChild(row);
+        }
 
 
         const imgleft = document.createElement("img");
@@ -54,8 +59,7 @@
     </div>
 
 
-    <div class="main" id="main-div">
-    </div>
+    <div class="main" id="main-div"></div>
 
 
     <script>
@@ -66,48 +70,71 @@
         main.append(h1);
         main.append(h2);
 
-        main.append(list);
-        list.append(origini);
-        list.append(taglia);
-        list.append(aspetto);
-        list.append(indole);
-        list.append(altro);
+        main.append(table);
+        document.getElementById("th0").innerHTML = "Habitat:"
+        document.getElementById("th1").innerHTML = "Taglia:"
+        document.getElementById("th2").innerHTML = "Aspetto:"
+        document.getElementById("th3").innerHTML = "Indole:"
+        document.getElementById("th4").innerHTML = "Altro:"
 
         switch (cat) {
             case "calico":
                 h1.innerHTML = "Gatto Calico";
                 h2.innerHTML = "Scheda Tecnica";
-                origini.innerHTML = "Gatto Calico";
-                taglia.innerHTML = "Gatto Calico";
-                aspetto.innerHTML = "Gatto Calico";
-                indole.innerHTML = "Gatto Calico";
-                altro.innerHTML = "Gatto Calico";
+                document.getElementById("td0").innerHTML = "Il termine Calico non indica una razza di gatto ma si riferisce alla colorazione del mantello del gatto, quindi non ha un habitat specifico ma tradizionalmente è associato alla razza del gatto europeo."
+                document.getElementById("td1").innerHTML = "La colorazione del manto tipica del gatto calico può verificarsi in qualsiasi razza, quindi la taglia può variare molto."
+                document.getElementById("td2").innerHTML = "Il mantello del gatto calico è composto prevalentemente da bianco con macchie nere e arancioni.<br>I suoi occhi sono generalmente verdi."
+                document.getElementById("td3").innerHTML = "La colorazione del manto tipica del gatto calico può verificarsi in qualsiasi razza, quindi l'indole può variare molto.<br>è addomesticabile."
+                document.getElementById("td4").innerHTML = "I gatti calici sono quasi principalmente femmine, sono maschi solo in caso di anomalie genetiche (sindrome di Klinefelter). Questo perchè a determinare il sesso del gatto sono i cromosomi (XX determinano una femmina mentre XY determinano un maschio), ed all'interno del cromosoma X sono contenuti anche i geni che codificano la colorazione del pelo nero e arancione, quindi una gatta femmina può quindi acquisire un cromosoma X contenente il gene per il colore nero ed un altro cromosoma X contenente il gene per il colore arancione. Il gene per il colore bianco non è contenuto nel cromosoma X."
 
-                p.innerHTML = "Il gatto calico...";
                 imgleft.src = "./img/calico.png";
                 imgright.src = "https://upload.wikimedia.org/wikipedia/commons/3/39/Gatto_tricolore_calico.jpg";
                 break;
             case "pallas":
                 h1.innerHTML = "Gatto Pallas";
-                p.innerHTML = "Il gatto pallas...";
-                imgleft.src = "./img/pallas.jpg";
+                h2.innerHTML = "Scheda Tecnica";
+                document.getElementById("td0").innerHTML = "Il gatto pallas è diffuso principalmente in Asia Centrale, ma si può trovare anche in Russia o in Asia Orientale. Vive in ambienti freddi, ad altitudini che possono arrivare fino a 5000m."
+                document.getElementById("td1").innerHTML = "Piccola (quanto un gatto domestico)"
+                document.getElementById("td2").innerHTML = "Il gatto pallas ha un pelo grigio molto folto e spesso (per questo sembra molto più grande di quello che è).<br>Ha una corporatura robusta, delle zampe corte e delle orecchie piccole e rotonde.<br>Le sue pupille sono rotonde, a differenza dei gatti domestici che le hanno verticali."
+                document.getElementById("td3").innerHTML = "Il gatto pallas è di indole selvatica e solitaria, è poco socievole ma non aggressivo.<br>Non è addomesticabile."
+                document.getElementById("td4").innerHTML = "Il gatto pallas è una specie a rischio, in parte a causa dell'uomo, ma anche per la mancanza di cuccioli: la femmina infatti può venire fecondata solo due giorni l'anno.<br>Quando fa freddo si copre le zampe con la coda (come nella foto a sinistra)."
+
+                imgleft.src = "./img/pallas.png";
                 imgright.src = "https://scontent-mxp2-1.cdninstagram.com/v/t51.82787-15/523816513_18519853672036982_9193797256725147269_n.jpg?stp=dst-jpg_e35_p720x720_tt6&_nc_cat=110&ig_cache_key=MzY4Njc4ODQ4MTYxNDU5MzkwMQ%3D%3D.3-ccb1-7&ccb=1-7&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTc5OS5zZHIuQzMifQ%3D%3D&_nc_ohc=s7BjmiRXQygQ7kNvwEGWt1i&_nc_oc=Adlf7hFTY4CY3k5XtSuk_jjCjK0Y4UWz-EZCbERkhSxzfrTy-A_rb5IKlySbqT-v3yc&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent-mxp2-1.cdninstagram.com&_nc_gid=0pfYfVmSgAlEwk84_veTJA&oh=00_AfcxpqxP1PlUkjExL27WlsxXAlFy4hqE0KaD90PgTWPQ0w&oe=690B2BB7";
                 break;
             case "sabbia":
                 h1.innerHTML = "Gatto delle Sabbie";
-                p.innerHTML = "Il gatto delle sabbie...";
+                h2.innerHTML = "Scheda Tecnica";
+                document.getElementById("td0").innerHTML = ""
+                document.getElementById("td1").innerHTML = ""
+                document.getElementById("td2").innerHTML = ""
+                document.getElementById("td3").innerHTML = ""
+                document.getElementById("td4").innerHTML = ""
+
                 imgleft.src = "./img/sabbia.png";
                 imgright.src = "https://media.istockphoto.com/id/453811375/it/foto/gatto-delle-sabbie.jpg?s=612x612&w=0&k=20&c=bVWM533-xxJ5jZLjIj8HcLSdi34Tp5SI8N5hGcwKZKU=";
                 break;
             case "munchkin":
                 h1.innerHTML = "Munchkin";
-                p.innerHTML = "Il Munchkin...";
+                h2.innerHTML = "Scheda Tecnica";
+                document.getElementById("td0").innerHTML = ""
+                document.getElementById("td1").innerHTML = ""
+                document.getElementById("td2").innerHTML = ""
+                document.getElementById("td3").innerHTML = ""
+                document.getElementById("td4").innerHTML = ""
+
                 imgleft.src = "./img/munchkin.jpg";
                 imgright.src = "https://i.pinimg.com/736x/c4/d0/cc/c4d0cc065d798792c8d089f2e5c5c0c8.jpg";
                 break;
             case "mainecoon":
                 h1.innerHTML = "Maine Coon";
-                p.innerHTML = "Il Maine Coon...";
+                h2.innerHTML = "Scheda Tecnica";
+                document.getElementById("td0").innerHTML = ""
+                document.getElementById("td1").innerHTML = ""
+                document.getElementById("td2").innerHTML = ""
+                document.getElementById("td3").innerHTML = ""
+                document.getElementById("td4").innerHTML = ""
+
                 imgleft.src = "./img/mainecoon.jpg";
                 imgright.src = "https://i.pinimg.com/736x/0d/35/e4/0d35e4b4aa4e6b989e92d1267866ae25.jpg";
                 break;
