@@ -11,7 +11,20 @@
     <script>
         const p = document.createElement("p");
         const h1 = document.createElement("h1");
+        h1.className = "title";
+        const h2 = document.createElement("h2");
+        h2.className = "subtitle";
         const a = document.createElement("a");
+
+
+
+        const list = document.createElement("ul");
+        const origini = document.createElement("li");
+        const taglia = document.createElement("li");
+        const aspetto = document.createElement("li");
+        const indole = document.createElement("li");
+        const altro = document.createElement("li");
+
 
         const imgleft = document.createElement("img");
         imgleft.id = "left";
@@ -19,6 +32,7 @@
         const imgright = document.createElement("img");
         imgright.id = "right";
         imgright.className = "rightimg"
+
 
         const cat_list = ["pallas", "calico"];
         var cat = new URLSearchParams(window.location.search).get("cat");
@@ -40,7 +54,8 @@
     </div>
 
 
-    <div class="main" id="main-div"></div>
+    <div class="main" id="main-div">
+    </div>
 
 
     <script>
@@ -49,10 +64,25 @@
         main.append(imgleft);
         main.append(imgright);
         main.append(h1);
-        main.append(p);
+        main.append(h2);
+
+        main.append(list);
+        list.append(origini);
+        list.append(taglia);
+        list.append(aspetto);
+        list.append(indole);
+        list.append(altro);
+
         switch (cat) {
             case "calico":
                 h1.innerHTML = "Gatto Calico";
+                h2.innerHTML = "Scheda Tecnica";
+                origini.innerHTML = "Gatto Calico";
+                taglia.innerHTML = "Gatto Calico";
+                aspetto.innerHTML = "Gatto Calico";
+                indole.innerHTML = "Gatto Calico";
+                altro.innerHTML = "Gatto Calico";
+
                 p.innerHTML = "Il gatto calico...";
                 imgleft.src = "./img/calico.png";
                 imgright.src = "https://upload.wikimedia.org/wikipedia/commons/3/39/Gatto_tricolore_calico.jpg";

@@ -126,3 +126,22 @@ input[type="submit"] {
     float: left;
     padding-right: 10px;
 }
+
+ul {
+    list-style-type: none;
+    display: inline-block;
+    width: 50%;
+}
+
+.title {
+    display: inline-block;
+    width: 50%;
+    margin-bottom: 0;
+}
+
+.subtitle {
+    display: inline-block;
+    width: 50%;
+    margin-bottom: 0;
+    padding-left: 10px;
+}
