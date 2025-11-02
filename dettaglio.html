@@ -8,10 +8,8 @@
     <link rel="icon" href="./img/favicon.jpg">
 
     <script>
-        const p = document.createElement("p");
         const h1 = document.createElement("h1");
         h1.className = "title";
-        const a = document.createElement("a");
 
         const table = document.createElement("table");
         for (var i = 0; i < 5; i++) {
@@ -21,12 +19,11 @@
             const tdata = document.createElement("td");
             tdata.id = "td" + i;
 
-            row.appendChild(theader);
-            row.appendChild(tdata);
+            row.append(theader);
+            row.append(tdata);
 
-            table.appendChild(row);
+            table.append(row);
         }
-
 
         const imgleft = document.createElement("img");
         imgleft.id = "left";
@@ -35,8 +32,7 @@
         imgright.id = "right";
         imgright.className = "rightimg"
 
-
-        const cat_list = ["pallas", "calico"];
+        const cat_list = ["calico", "pallas", "sabbia", "munchkin", "mainecoon"];
         var cat = new URLSearchParams(window.location.search).get("cat");
         window.document.title = "Gatto " + cat;
     </script>

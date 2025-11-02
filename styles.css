@@ -16,9 +16,6 @@ header {
     height: 50px;
     width: 100%;
     top: 0;
-}
-
-header p {
     font-size: large;
 }
 
@@ -31,7 +28,15 @@ header p {
     top: 0;
 }
 
-a:not(.index) {
+.sidebar a:hover {
+    background-color: grey;
+}
+
+.sidebar #active {
+    background-color: #D97925;
+}
+
+a:not(.indexlinks) {
     color: black;
     display: block;
     padding: 5px;
@@ -39,14 +44,6 @@ a:not(.index) {
     font-weight: bold;
     font-size: large;
     text-decoration: none;
-}
-
-.sidebar a:hover {
-    background-color: grey;
-}
-
-.sidebar #active {
-    background-color: #D97925;
 }
 
 .main {
@@ -106,17 +103,16 @@ label {
 }
 
 label:hover {
-    background-color: aliceblue;
+    background-color: gray;
 }
 
 label:active {
-    background-color: grey;
+    background-color: orange;
 }
 
 input[type="submit"] {
     display: none;
 }
-
 
 .rightimg {
     height: 300px;
