@@ -74,6 +74,8 @@ a:not(.index) {
     border-right: black solid 1px;
     border-radius: 15px;
     display: flex;
+    background-color: #EFEBE4;
+
 }
 
 .lista a:hover {

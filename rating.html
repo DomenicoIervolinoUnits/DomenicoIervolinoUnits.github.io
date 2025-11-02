@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="./img/favicon.jpg">
 
-
+    <script type="text/javascript" id="cookiebanner" src="https://cdn.jsdelivr.net/gh/dobarkod/cookie-banner@1.2.2/dist/cookiebanner.min.js"></script>
 </head>
 
 <body>
@@ -43,8 +43,8 @@
 
     <script>
         var file = new URLSearchParams(window.location.search).get("imgfile");
-        if (file) {
-
+        var imgext = new RegExp(".(png|jpeg|jpg|webp)$");
+        if (imgext.test(file)) {
             const result = document.getElementById('result');
             result.innerHTML = "10/10 <br> Bellissimo Gatto!"; //Tutti i gatti sono belli!!!
         }

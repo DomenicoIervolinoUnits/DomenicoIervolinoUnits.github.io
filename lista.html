@@ -7,7 +7,21 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="./img/favicon.jpg">
 
+    <script type="text/javascript" id="cookiebanner" src="https://cdn.jsdelivr.net/gh/dobarkod/cookie-banner@1.2.2/dist/cookiebanner.min.js"></script>
 
+    <script>
+        function changeBackgroundColor() {
+            if (window.getComputedStyle(document.body).getPropertyValue("background-color") == "rgb(239, 235, 228)") {
+                document.body.style.background = "black";
+                document.getElementById("carouseltext").style.color = "white";
+            }
+            else {
+                document.body.style.background = "#EFEBE4";
+                document.getElementById("carouseltext").style.color = "black";
+            }
+
+        }
+    </script>
 </head>
 
 <body>
@@ -26,8 +40,8 @@
     <div class="main">
 
         <div style="margin-bottom: 30px; margin: auto; align-items: center;">
-            <img src="https://i.pinimg.com/736x/94/96/38/949638ab23395edca32810a3ad1431d3.jpg" alt="Pondering Cat" height="200px" style="display: block; margin: auto;">
-            <p style="text-align: center; padding-top: 15px;">Scorri per cercare un gatto e poi cliccalo per maggiori dettagli</p>
+            <img src="https://i.pinimg.com/736x/94/96/38/949638ab23395edca32810a3ad1431d3.jpg" alt="Pondering Cat" height="200px" style="display: block; margin: auto;" onclick="changeBackgroundColor()">
+            <p style="text-align: center; padding-top: 15px;" id="carouseltext">Scorri per cercare un gatto e poi cliccalo per maggiori dettagli</p>
         </div>
 
         <div class="lista">

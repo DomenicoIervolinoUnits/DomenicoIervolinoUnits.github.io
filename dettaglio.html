@@ -1,7 +1,6 @@
 <html lang="it">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
@@ -41,6 +40,8 @@
         var cat = new URLSearchParams(window.location.search).get("cat");
         window.document.title = "Gatto " + cat;
     </script>
+
+    <script type="text/javascript" id="cookiebanner" src="https://cdn.jsdelivr.net/gh/dobarkod/cookie-banner@1.2.2/dist/cookiebanner.min.js"></script>
 </head>
 
 <body>
@@ -56,9 +57,7 @@
         <a href="./rating.html">Cat Rating</a>
     </div>
 
-
     <div class="main" id="main-div"></div>
-
 
     <script>
         const main = document.getElementById('main-div');
@@ -125,7 +124,7 @@
                 document.getElementById("td1").innerHTML = "Grande, probabilmente il più grande gatto domestico.";
                 document.getElementById("td2").innerHTML = "Il Maine Coon è un gatto fiero con un corpo molto grande coperto da un lungo mantello lucido e resiste all'acqua.<br>La coda è lunga e folta, così come le orecchie.";
                 document.getElementById("td3").innerHTML = "Il Maine Coon è un gatto estremamente socievole e gentile<br>è addomesticabile.";
-                document.getElementById("td4").innerHTML = "Sono una razza predisposta ad essere polidattilo, cioè avere più dita nelle zampe.<br>Il loro lungo pelo è resistente all'acqua e generalmente i Maine Coon amano l'acqua più rispetto ad altri gatti.";
+                document.getElementById("td4").innerHTML = "Sono una razza predisposta ad essere polidattile, cioè avere più dita nelle zampe.<br>Il loro lungo pelo è resistente all'acqua e generalmente i Maine Coon amano l'acqua più rispetto ad altri gatti.";
 
                 imgleft.src = "./img/mainecoon.jpg";
                 imgright.src = "https://i.pinimg.com/736x/0d/35/e4/0d35e4b4aa4e6b989e92d1267866ae25.jpg";
